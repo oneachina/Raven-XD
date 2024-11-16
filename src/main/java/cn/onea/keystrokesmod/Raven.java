@@ -52,4 +52,15 @@ public class Raven{
         I18nManager.init();
     }
 
+    public static ScheduledExecutorService getExecutor() {
+        return ex;
+    }
+
+    public static KeySrokeRenderer getKeyStrokeRenderer() {
+        return keySrokeRenderer;
+    }
+
+    public static void toggleKeyStrokeConfigGui() {
+        isKeyStrokeConfigGuiToggled = true;
+    }
 }
