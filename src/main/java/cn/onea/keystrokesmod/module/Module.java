@@ -4,6 +4,7 @@ import cn.onea.keystrokesmod.Raven;
 import cn.onea.keystrokesmod.module.setting.Setting;
 import cn.onea.keystrokesmod.module.setting.impl.SubMode;
 import cn.onea.keystrokesmod.script.Script;
+import cn.onea.keystrokesmod.utility.i18n.I18nModule;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.Minecraft;
@@ -14,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
-public class Module {
+public abstract class Module {
     @Getter
     @Setter
     private @Nullable I18nModule i18nObject = null;
@@ -138,6 +139,8 @@ public class Module {
         }
     }
 
+    public abstract void register();
+
     public String getInfo() {
         return "";
     }
@@ -240,6 +243,10 @@ public class Module {
     public void guiButtonToggled(ButtonSetting b) throws Exception {}
     public void setBind(int keybind) {
         this.keycode = keybind;
+    }
+
+    public Setting[] getSettings() {
+        return new Setting[0];
     }
 
     public enum category {
