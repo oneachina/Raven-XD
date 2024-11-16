@@ -1,6 +1,7 @@
 package cn.onea.keystrokesmod.module.setting.impl;
 
 import cn.onea.keystrokesmod.utility.i18n.I18nModule;
+import cn.onea.keystrokesmod.utility.i18n.settings.I18nButtonSetting;
 import cn.onea.keystrokesmod.utility.i18n.settings.I18nSetting;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
