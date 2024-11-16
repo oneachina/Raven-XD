@@ -16,6 +16,8 @@ Raven B4, but not only for Hypixel.
 
 Raven B4, but is Minecraft 1.21
 
+请注意这是非官方NextGen，使用NeoForge
+
 <a href="https://dsc.gg/ravenxd"><img src="https://invidget.switchblade.xyz/zSgDKArSH4" alt="https://dsc.gg/ravenxd"/></a><br>
 
 ## How do I install this client?
