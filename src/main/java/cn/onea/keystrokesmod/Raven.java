@@ -3,6 +3,7 @@ package cn.onea.keystrokesmod;
 import cn.onea.keystrokesmod.keystroke.KeySrokeRenderer;
 import cn.onea.keystrokesmod.module.Module;
 import cn.onea.keystrokesmod.module.ModuleManager;
+import cn.onea.keystrokesmod.utility.i18n.I18nManager;
 import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -48,6 +49,7 @@ public class Raven{
         Runtime.getRuntime().addShutdownHook(new Thread(ex::shutdown));
         ClientCommandHandler.init();
         NeoForge.EVENT_BUS.register(this);
+        I18nManager.init();
     }
 
 }

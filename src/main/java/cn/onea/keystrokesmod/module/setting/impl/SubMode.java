@@ -5,6 +5,8 @@ import cn.onea.keystrokesmod.module.Module;
 import cn.onea.keystrokesmod.module.setting.Setting;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.annotation.Annotation;
+
 public abstract class SubMode<T extends Module> extends Module{
     protected final String name;
     public final T parent;
@@ -39,4 +41,10 @@ public abstract class SubMode<T extends Module> extends Module{
     public void registerSetting(Setting setting) {
         super.registerSetting(setting);
     }
+
+    public abstract <T2 extends Annotation> T2 getAnnotation(@NotNull Class<T2> annotationClass);
+
+    public abstract Annotation[] getAnnotations();
+
+    public abstract Annotation[] getDeclaredAnnotations();
 }

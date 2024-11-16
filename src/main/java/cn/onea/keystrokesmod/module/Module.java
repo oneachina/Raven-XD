@@ -2,6 +2,7 @@ package cn.onea.keystrokesmod.module;
 
 import cn.onea.keystrokesmod.Raven;
 import cn.onea.keystrokesmod.module.setting.Setting;
+import cn.onea.keystrokesmod.module.setting.impl.ButtonSetting;
 import cn.onea.keystrokesmod.module.setting.impl.SubMode;
 import cn.onea.keystrokesmod.script.Script;
 import cn.onea.keystrokesmod.utility.i18n.I18nModule;
