@@ -1,5 +1,6 @@
 package cn.onea.keystrokesmod.utility.i18n;
 
+import cn.onea.keystrokesmod.Raven;
 import cn.onea.keystrokesmod.module.Module;
 import cn.onea.keystrokesmod.module.setting.Setting;
 import cn.onea.keystrokesmod.module.setting.impl.ButtonSetting;
