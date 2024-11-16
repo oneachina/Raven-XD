@@ -1,27 +1,37 @@
+<div align="center">
 
-Installation information
-=======
+# Raven XD
+<p align="center">
+    <img src="https://img.shields.io/github/issues/oneachina/Raven-XD" alt="issues">
+    <img src="https://img.shields.io/badge/license-GPLV3-green" alt="License">
+</p>
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+[![Github Release Downloads](https://img.shields.io/github/downloads/oneachina/Raven-XD/total?label=Github%20Release%20Downloads&style=flat-square)](https://github.com/oneachina/Raven-XD/releases)
 
-> **Note**: For Eclipse, use tasks in `Launch Group` instead of ones founds in `Java Application`. A preparation task must run before launching the game. NeoGradle uses launch groups to do these subsequently.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Raven B4, but for those who can't afford it.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Raven B4, but not only for Hypixel.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Raven B4, but is Minecraft 1.21
+
+<a href="https://dsc.gg/ravenxd"><img src="https://invidget.switchblade.xyz/zSgDKArSH4" alt="https://dsc.gg/ravenxd"/></a><br>
+
+## How do I install this client?
+
+### Steps:
+
+1. **Download the latest .jar file from the releases**:
+    - Download from [https://github.com/oneachina/Raven-XD/releases](https://github.com/oneachina/Raven-XD/releases)
+    - This client requires NeoForge 1.21.1 .
+
+2. **Put in mods folder of your .minecraft directory**:
+    - If you don't already have this, please install NeoForge 1.21 by clicking installer, and clicking skip after 5 seconds (https://neoforged.net/).
+    - Once you've done that, open file explorer, and in the search bar type %Appdata%. Once you're there navigate to .minecraft, then finally the folder called "mods".
+    - After you're there, all you have to do is drag the file that you just downloaded there.
+
+3. **Launch Minecraft**:
+    - Once your on this step, you are pretty much done. When it's done loading, if you have done it properly, it should have a background with a train and the string "Raven XD" in big white letters.
+    - For more help, join the discord server and ask in #public-support.
+</div>
