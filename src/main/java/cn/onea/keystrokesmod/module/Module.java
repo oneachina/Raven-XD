@@ -1,6 +1,7 @@
 package cn.onea.keystrokesmod.module;
 
 import cn.onea.keystrokesmod.Raven;
+import cn.onea.keystrokesmod.module.impl.client.Settings;
 import cn.onea.keystrokesmod.module.setting.Setting;
 import cn.onea.keystrokesmod.module.setting.impl.ButtonSetting;
 import cn.onea.keystrokesmod.module.setting.impl.SubMode;
@@ -9,10 +10,10 @@ import cn.onea.keystrokesmod.utility.i18n.I18nModule;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import net.neoforged.neoforge.common.NeoForge;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import scala.reflect.internal.util.WeakHashSet;
 
 import java.util.ArrayList;
 
@@ -22,8 +23,8 @@ public abstract class Module {
     private @Nullable I18nModule i18nObject = null;
 
     @Getter
-    //protected final ArrayList<Setting> settings;
-    //private final WeakHashSet<Setting> settingsWeak;
+    protected final ArrayList<Setting> settings;
+    private final WeakHashSet<Setting> settingsWeak;
     private final String moduleName;
     private String prettyName;
     private String prettyInfo = "";
@@ -228,12 +229,12 @@ public abstract class Module {
     public void toggle() {
         if (this.isEnabled()) {
             this.disable();
-            if (Settings.toggleSound.getInput() != 0) mc.thePlayer.playSound(Settings.getToggleSound(false), 1, 1);
+            if (Settings.toggleSound.getInput() != 0) mc.player.playSound(Settings.getToggleSound(false), 1, 1);
             if (Notifications.moduleToggled.isToggled())
                 Notifications.sendNotification(Notifications.NotificationTypes.INFO, "§4Disabled " + this.getPrettyName());
         } else {
             this.enable();
-            if (Settings.toggleSound.getInput() != 0) mc.thePlayer.playSound(Settings.getToggleSound(true), 1, 1);
+            if (Settings.toggleSound.getInput() != 0) mc.player.playSound(Settings.getToggleSound(true), 1, 1);
             if (Notifications.moduleToggled.isToggled())
                 Notifications.sendNotification(Notifications.NotificationTypes.INFO, "§2Enabled " + this.getPrettyName());
         }

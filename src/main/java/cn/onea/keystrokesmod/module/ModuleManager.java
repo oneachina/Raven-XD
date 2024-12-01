@@ -1,6 +1,10 @@
 package cn.onea.keystrokesmod.module;
 
+import cn.onea.keystrokesmod.module.impl.render.HUD;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ModuleManager {
@@ -34,5 +38,19 @@ public class ModuleManager {
             }
         }
         return null;
+    }
+
+    private static double getWidth(@NotNull Module module) {
+        String text = module.getPrettyName()
+                + ((HUD.showInfo.isToggled() && !module.getPrettyInfo().isEmpty()) ? " " + module.getPrettyInfo() : "");
+        //return HUD.getFontRenderer().width(HUD.lowercase.isToggled() ? text.toLowerCase() : text);
+    }
+
+    public static void sort() {
+        if (HUD.alphabeticalSort.isToggled()) {
+            organizedModules.sort(Comparator.comparing(Module::getPrettyName));
+        } else {
+            organizedModules.sort((c1, c2) -> Double.compare(getWidth(c2), getWidth(c1)));
+        }
     }
 }

@@ -28,7 +28,7 @@ public class Raven{
     private static boolean isKeyStrokeConfigGuiToggled;
     private static final ScheduledExecutorService ex = Executors.newScheduledThreadPool(4);
     @Getter
-    private static ModuleManager moduleManager;
+    public static ModuleManager moduleManager;
     //public static ClickGui clickGui;
     //public static ProfileManager profileManager;
     //public static ScriptManager scriptManager;
